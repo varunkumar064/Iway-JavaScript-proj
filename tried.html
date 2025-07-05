@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar" id="sidebar">
+                <h1>JavaScript</h1>
+                <ul>
+                    <li onclick="show_day7()">Day 7</li>
+                    <li onclick="show_day8()">Day 8</li>
+                </ul>
+            </div>
+        
+            <div class="main">
+            <!-- Day 7 notes -->
+                <div id="day7">
+                    <h1 id="main-content-day7" style="text-align: center;"></h1>
+                    <p id="main-body-day7"></p>
+                </div>
+            <!-- Day 8 notes -->
+                <div id="day8">
+                    <h1 id="main-content-day8" style="text-align: center;"></h1>
+                    <p id="main-body-day8"></p>
+                </div>
+
+            </div>  
+        </div>
+        <script>
+            function show_day7(){
+               
+                document.getElementById("day7").style.display="block";
+                document.getElementById("day8").style.display="none";
+                
+                 //adding content to the page
+                let h1_content = "JavaScript";
+                let body_content = 'Day 7 covers key concepts in JavaScript related to comparisons and conditional logic. It begins with comparison operators like >, <, >=, <=, ==, and ===, explaining how JavaScript evaluates expressions with or without type coercion. Loose equality (==) allows type conversion (e.g.,"5" == 5 is true), while strict equality (===) requires both value and type to match. String comparisons are based on Unicode values, where case sensitivity can affect outcomes (e.g., "hello" < "Hello" is false).The notes also detail type coercion in comparisons, showing how JavaScript converts different data types for comparison (e.g., "5" > 2, true == 1). In terms of control flow, it explains how to use if, else, and else if statements to conditionally execute blocks of code. For concise decisions, the ternary operator (condition ? trueResult : falseResult) is introduced, including examples of chaining multiple conditions.Finally, the switch statement is covered as an alternative to long if-else ladders, ideal for comparing one variable against multiple constant values. Break statements are used to prevent fall-through between cases. These concepts form the foundation for decision-making in JavaScript programming.';
+                document.getElementById("main-content-day7").innerHTML=h1_content;
+                document.getElementById("main-body-day7").innerHTML=body_content;
+
+                //crating an anchor element  and appending them
+                let a1 = document.createElement("a");
+                a1.href = "notes html/day7.html"
+                a1.textContent= "click here to access full notes";
+                document.getElementById("day7").appendChild(a1);
+                
+
+                //create a p tage to specify "or"
+                let or = document.createElement("p");
+                or.innerHTML= "or";
+                document.getElementById("day7").appendChild(or);
+
+                //create an anchor tag to download
+                let a2 = document.createElement("a");
+                a2.href = "js notes/day_7_Javascript_notes.docx"
+                a2.textContent= "Download";
+                document.getElementById("day7").appendChild(a2);
+
+            }
+            
+            function show_day8(){
+                document.getElementById("day8").style.display="block";
+                document.getElementById("day7").style.display="none";
+                //adding content to the page
+                let h1_content = "JavaScript";
+                let body_content = 'Day 8 focuses on logical operators and looping constructs in JavaScript. It begins with the logical OR (||) operator, which returns the first truthy value or the last falsy one if none are true. For example, 0 || null || "Hello" returns "Hello". The logical AND (&&) operator returns the first falsy value it encounters, or the last truthy value if all are true. For instance, 5 && "Hi" && 0 returns 0.The logical NOT (!) operator is used to invert a value’s truthiness, such as !0 resulting in true because 0 is falsy. These operators are vital for building complex conditions in programs.The notes also cover JavaScript loops, which allow repetition of code. The while loop runs as long as a condition is true, checking the condition before each iteration. The do...while loop guarantees at least one execution before checking the condition. The for loop is a compact syntax that includes initialization, condition, and increment steps in one line—ideal for fixed iteration counts.Together, these logical tools and loop structures help developers control program flow and automate repetitive tasks efficiently.';
+                document.getElementById("main-content-day8").innerHTML=h1_content;
+                document.getElementById("main-body-day8").innerHTML=body_content;
+
+                //crating an anchor element  and appending them
+                let a1 = document.createElement("a");
+                a1.href = "notes html/day_8.html"
+                a1.textContent= "click here to access full notes";
+                document.getElementById("day8").appendChild(a1);
+                
+
+                //create a p tage to specify "or"
+                let or = document.createElement("p");
+                or.innerHTML= "or";
+                document.getElementById("day8").appendChild(or);
+
+                //create an anchor tag to download
+                let a2 = document.createElement("a");
+                a2.href = "js notes/day_8_Javascript_notes.docx"
+                a2.textContent= "Download";
+                document.getElementById("day8").appendChild(a2);
+                
+            }
+        </script>
+    </body>
+</html>

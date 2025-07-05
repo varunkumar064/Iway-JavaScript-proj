@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Notes</title>
+        <link rel="stylesheet" href="mainsstyle.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div id="side-bar">
+                <h2 style="text-align: center; font-family: 'Oswald', sans-serif; font-style: italic; color: rgb(245, 131, 25);">JavaScript</h2>
+                <h3>Day Module notes:</h3>
+                <ul><li onclick="show(1)">Day 1: Introdution</li>
+                    <li onclick="show(2)">Day 2: HTML DOM</li>
+                    <li onclick="show(3)">Day 3: Events</li>
+                    <li onclick="show(4)">Day 4: Events 2</li>
+                    <li onclick="show(5)">Day 5: DOM 2</li>
+                    <li onclick="show(6)">Day 6: Datatypes</li>
+                    <li onclick="show(7)">Day 7: Comparisons and conditional logic</li>
+                    <li onclick="show(8)">Day 8: logical operators and looping constructs</li>
+                    <li onclick="show(9)">Day 9: Loop control statements</li>
+                    <li onclick="show(10)">Day 10: Arrow function</li>
+                    <li onclick="show(11)">Day 11: JS Objects</li>
+                    <li onclick="show(12)">Day 12: Strings</li>
+                    <li onclick="show(13)">Day 13: Arrays</li>
+                    <li onclick="show(14)">Day 14: Classes</li>
+                    <li onclick="show(15)">Day 15: Dynamic Language</li>
+                </ul>
+            </div>
+            <div id="main-content">
+                <h1 style="margin-bottom: 20px; font-family: 'Oswald', sans-serif; font-style: italic;">JavaScript</h1>
+                <p style="font-size:20px; line-height: 45px; margin-bottom:35px;">
+                    JavaScript is a versatile and essential programming language that brings life to modern websites by enabling interactivity, responsiveness, and dynamic content. Unlike HTML and CSS, which structure and style a webpage, JavaScript allows users to interact with the page in real-time — from clicking buttons and submitting forms to fetching data without reloading the page. It operates directly within the browser, making websites feel fast and seamless. With the help of the Document Object Model (DOM), JavaScript can modify the structure and appearance of a webpage on the fly, providing a more immersive user experience. It supports multiple programming paradigms, including object-oriented and functional styles, which gives developers the freedom to write code in a way that best suits their project. Over the years, JavaScript has grown beyond just browser use; with platforms like Node.js, it now powers server-side applications as well, making it possible to build full-stack solutions using a single language. The JavaScript ecosystem is rich with frameworks and libraries such as React, Vue, and Angular, which streamline development and promote efficient, scalable code. JavaScript also plays a key role in technologies like Progressive Web Apps (PWAs), which offer offline support and app-like features right in the browser. Thanks to its widespread browser support and constant evolution through ECMAScript updates, JavaScript remains one of the most in-demand and future-ready languages in the tech industry.
+                </p>
+                <p style="font-size:15px; line-height: 45px; margin-bottom:35px; color: rgb(232, 107, 11); text-align: center; font-size: 20px;">Please go through all modules to access notes</p>
+             
+
+            </div>
+        </div>
+
+        <script>
+            const daySummaries = {
+                    1: "JavaScript is a powerful scripting language that enables interactivity in web pages.Originally named LiveScript, it was renamed to JavaScript to capitalize on Java’s popularity, though the two are unrelated.It runs on both browsers (client-side) and servers (Node.js).Popular JavaScript engines include V8 (Chrome), SpiderMonkey (Firefox), and Chakra (IE).JavaScript can manipulate HTML and CSS, respond to user actions, and handle storage like cookies or localStorage.You can embed JavaScript inline or as external scripts in HTML.Writing JavaScript starts with tools like Visual Studio Code and Node.js.Code should be cleanly structured, using comments (//, /* */) for clarity.Semicolons are optional but recommended to avoid errors.Variables are declared with var, let, or const.var is function-scoped and can be re-declared.let is block-scoped and cannot be re-declared.const is block-scoped and must be initialized; its values can't be reassigned but objects can be mutated.JavaScript is case-sensitive and follows strict syntax.",
+                    2: 'The HTML DOM represents the page as a tree of nodes, enabling JavaScript to manipulate it in real time.Each HTML tag, attribute, or text becomes a node in this tree.DOM access methods include getElementById, getElementsByClassName, and getElementsByTagName.Modern approaches use querySelector and querySelectorAll for flexible CSS-style selection.You can modify content using innerHTML, innerText, or value (for inputs).CSS styles can be changed dynamically using .style properties.DOM manipulation includes creating elements with createElement, adding with appendChild, and removing with removeChild.Elements can also be replaced with replaceChild.Form validation checks if required fields are filled before submission. An onsubmit handler can run custom validation logic.This prevents blank submissions and improves user experience.JavaScript makes dynamic updates possible without refreshing the page.DOM scripting is the key to making interactive web apps.All modifications happen through the document object.Understanding the DOM is critical for client-side scripting',
+                    3: 'Events are actions like clicks, keypresses, and page loads that JavaScript can respond to.They allow web pages to become dynamic and interactive.Events can be added inline (HTML onclick) or with addEventListener (preferred).Mouse events include click, dblclick, mouseover, and mouseout.Keyboard events include keydown, keyup, and the deprecated keypress.Form events (submit, change, focus, blur) are used to validate or capture input.Window events like resize, scroll, and load help monitor user interaction with the browser.You can prevent default actions (like form submission) using event.preventDefault().JavaScript uses arrow functions and anonymous functions to handle events efficiently.Events improve UX by allowing real-time responses and data validation.They also enable modular and event-driven programming.Each event has an event object (e.g., event.key) for detailed info.You can attach multiple events to a single elements.All modern web interactivity relies heavily on event handling.Understanding events is essential for frontend developers.',
+                    4: 'addEventListener() attaches functions to events without replacing existing ones.Multiple event types or handlers can be added to the same element.Named or anonymous functions can be used as callbacks.You can also attach listeners to non-element objects like window.To pass arguments in event handlers, use anonymous functions.To remove listeners, use removeEventListener() with a named function.DOM nodes include document, element, text, and comment nodes.DOM tree relationships involve parent, child, and sibling nodes.You can navigate the DOM using properties like parentNode, firstChild, nextSibling, etc.DOM manipulation can target inner content with innerHTML or exact text via nodeValue.Examples illustrate copying or modifying content dynamically between elements.document.body and document.documentElement give access to the page structure.nodeName returns tag names or node types like #text or #document.Understanding node relationships helps in dynamic document traversal.It’s crucial for building responsive and maintainable web pages.',
+                    5: 'Everything in the DOM is a node: documents, elements, text, and comments.Use insertBefore() to place elements at specific positions.To delete elements, use remove() or removeChild(); older browsers need parentNode.removeChild().Replace elements using replaceChild().HTMLCollection is an array-like structure returned by methods like getElementsByTagName.It’s live, meaning it updates automatically when the DOM changes.Access elements with index (myCollection[0]) or loop through them using a for loop.NodeList is similar but may contain more than just elements (like text nodes).Use querySelectorAll() or childNodes to get a NodeList.NodeLists are static and don’t auto-update.Both structures are iterable, though NodeList supports forEach() in modern browsers.Use .length to get the number of nodes or elements.Understanding both is essential for looping and mass DOM operations.They simplify dynamic updates to grouped elements.',
+                    6: 'JavaScript has primitive types (Number, String, Boolean, Null, Undefined) and non-primitive types (Objects, Arrays, Functions).Objects store key-value pairs, while arrays store ordered lists.typeof checks the data type of a value, with some quirks (e.g., typeof null is "object").Type conversion can be done with String(), Number(), and Boolean().Falsy values (like 0, "", null, undefined, NaN) convert to false; others are truthy.Arithmetic operators include +, -, *, /, %, and **.+ is used for both addition and string concatenation, depending on context.Assignment operators (=, +=, -=, etc.) modify variables in-place.Chained assignments are allowed, e.g., a = b = c = 4.Increment (++) and decrement (--) operators adjust values up or down by one.Prefix versions (++x) change the value before returning it; postfix (x++) after.JavaScript"s loose typing allows flexible variable declarations.It automatically converts types in operations, which can be helpful or error-prone.Understanding types and conversions is key to writing bug-free code.Operators and data types form the core of JavaScript logic.',
+                    7: 'Day 7 covers key concepts in JavaScript related to comparisons and conditional logic. It begins with <strong>comparison operators</strong> like >, <, >=, <=, ==, and ===, explaining how JavaScript evaluates expressions with or without type coercion. <strong>Loose equality</strong> (==) allows type conversion (e.g.,"5" == 5 is true), while <strong>strict equality</strong> (===) requires both value and type to match. <strong>String comparisons</strong> are based on Unicode values, where case sensitivity can affect outcomes (e.g., "hello" < "Hello" is false).The notes also detail type coercion in comparisons, showing how JavaScript converts different data types for comparison (e.g., "5" > 2, true == 1). In terms of control flow, it explains how to use if, else, and else if statements to conditionally execute blocks of code. For concise decisions, the ternary operator (condition ? trueResult : falseResult) is introduced, including examples of chaining multiple conditions.Finally, the switch statement is covered as an alternative to long if-else ladders, ideal for comparing one variable against multiple constant values. Break statements are used to prevent fall-through between cases. These concepts form the foundation for decision-making in JavaScript programming.',
+                    8: 'Day 8 focuses on logical operators and looping constructs in JavaScript. It begins with the logical OR (||) operator, which returns the first truthy value or the last falsy one if none are true. For example, 0 || null || "Hello" returns "Hello". The logical AND (&&) operator returns the first falsy value it encounters, or the last truthy value if all are true. For instance, 5 && "Hi" && 0 returns 0.The logical NOT (!) operator is used to invert a value’s truthiness, such as !0 resulting in true because 0 is falsy. These operators are vital for building complex conditions in programs.The notes also cover JavaScript loops, which allow repetition of code. The while loop runs as long as a condition is true, checking the condition before each iteration. The do...while loop guarantees at least one execution before checking the condition. The for loop is a compact syntax that includes initialization, condition, and increment steps in one line—ideal for fixed iteration counts.Together, these logical tools and loop structures help developers control program flow and automate repetitive tasks efficiently.',
+                    9: "Day 9 focuses on loop control statements and functions in JavaScript. The break statement allows you to exit a loop immediately when a certain condition is met, while continue skips the current iteration and moves to the next one. These are useful for fine-tuning loop behavior. The notes then explain functions, which are reusable blocks of code that perform specific tasks. Functions are declared using the function keyword followed by a name and parentheses. Inside the curly braces is the code to execute. Variables declared inside a function are local and can't be accessed outside. However, functions can access global variables. Functions can also accept parameters and return values, making them dynamic and powerful. Default parameters provide fallback values when no arguments are passed. Naming functions clearly and descriptively is encouraged for better readability. Good examples include getUserData() or calculateTotal(), while poor names like doStuff() should be avoided. These basics form the building blocks for writing modular, maintainable JavaScript programs. ",
+                    10: 'Day 10 introduces arrow functions in JavaScript, a modern syntax for defining functions more concisely. Arrow functions do not use the function keyword and instead use a => symbol to separate parameters from the function body. They are ideal for writing short, clean, and readable functions. If the arrow function has only one parameter, parentheses around it are optional. For multiple parameters or none at all, parentheses are required. Single-line arrow functions return values automatically without needing the return keyword or curly braces. However, if the function contains multiple lines of code, curly braces must be used, and return should be written explicitly. One major advantage of arrow functions is that they lexically bind this, meaning they capture the this value from their surrounding context, which is useful in callback functions. Examples provided include square = x => x * x, which returns the square of a number, and greet = () => console.log("Hello"), which prints a greeting. Arrow functions are commonly used in modern development with arrays, event listeners, and promises. While they simplify syntax, they should be used where appropriate and not for every use case.',
+                    11: "Day 11 delves deep into JavaScript objects, which are central to the language. Objects represent real-world entities like people, cars, or anything with properties and behaviors. Properties are variables inside objects, and methods are functions that define actions. The car example shows properties like brand, model, and color, and methods like start() or stop(). Objects can be defined using object literals, constructors, or the new Object() syntax. You can access properties using dot notation or bracket notation. JavaScript objects are mutable, meaning they are referenced by memory and not duplicated when assigned to a new variable. Methods can be added or removed dynamically. Objects can also contain other objects, known as nested objects. Day 11 also explains how to display objects using methods like Object.values(), Object.entries(), loops, or JSON.stringify(). It further introduces object constructors for creating multiple objects of the same structure using the function Person(...) pattern. Properties and methods can be added to individual objects or via prototypes for all instances. The difference between primitive values and objects is also covered. Primitives are immutable and lack properties, while objects are flexible containers.",
+                    12: "Day 12 covers how to work with strings in JavaScript. Strings are used to store and manipulate text and can be created using single quotes, double quotes, or backticks. Backticks support template literals, which allow embedding variables directly within strings. Special characters can be added using escape sequences like \n for a newline or \" for double quotes. The .length property gives the number of characters in a string, and individual characters can be accessed using index notation or charAt(). You can change string case using .toUpperCase() or .toLowerCase(). JavaScript offers multiple string search methods like indexOf() to find the position of a substring, and lastIndexOf() to find the last occurrence. The includes() method checks whether a substring exists, while startsWith() and endsWith() help in prefix or suffix matching. To extract parts of strings, substring() and substr() are used. While substring() uses start and end indexes, substr() uses start index and length, although the latter is now considered legacy. These methods make it easy to handle and manipulate text data. ",
+                    13: "Day 13 focuses on JavaScript arrays, which are used to store ordered collections of items. Arrays can hold any data type including numbers, strings, booleans, or even objects. They are dynamic in size and indexed starting from 0. Arrays can be declared using square brackets or the Array() constructor. Accessing items is done via index notation, and .length returns the total number of items. You can add elements using .push() or .unshift(), and remove them with .pop() or .shift(). JavaScript also supports looping over arrays with traditional loops or modern methods like for...of and forEach(). The notes demonstrate how nested arrays work and how to access elements within them. Several useful array methods are discussed such as includes() to check existence, indexOf() to find positions, concat() to merge arrays, slice() to extract parts, and splice() to add or remove elements dynamically. These methods help manage and transform data efficiently. Arrays are foundational for tasks like form processing, data storage, and dynamic UI updates.",
+                    14: "Day 14 introduces ES6 classes in JavaScript, a modern way to create reusable code through objects and inheritance. A class is a blueprint for objects and can contain properties and methods. Using a constructor, values are assigned when an object is created. The CarShowRoom example shows how multiple objects can be created using the same class structure. Methods like display() are used to print object details. A class can also be created without a constructor, using a method to assign and show values, though it doesn’t store them persistently. JavaScript doesn’t support traditional constructor overloading, but similar behavior can be simulated using default values. The extends keyword is used for inheritance, allowing a child class to access and override parent class methods using super(). Function overriding is demonstrated by redefining the display() method in the child class. A common mistake is forgetting to use this in constructors, which leads to properties not being assigned. Proper use of this ensures values are tied to the object instance. ",
+                    15: "JavaScript is a dynamic language where variables store data and can be declared using var, let, or const. var is function-scoped and allows re-declaration, while let and const are block-scoped and prevent re-declaration within the same scope. JavaScript performs type conversions, either implicitly or explicitly, with functions like Number(), String(), parseInt(), and parseFloat(). For extremely large integers, BigInt provides full precision beyond the standard Number type's safe limits, though it cannot be directly mixed with regular numbers in operations. Hoisting moves declarations to the top of their scope, but let and const declarations enter a Temporal Dead Zone (TDZ) where they cannot be accessed before their actual declaration. The 'use strict' directive enables strict mode, preventing common coding errors and accidental global variables. JavaScript modules facilitate code organization and reusability through import and export statements, providing isolated scopes for variables. Iterables like Strings, Arrays, Sets, and Maps can be traversed using for...of loops. Sets store unique values, while Maps store key-value pairs with preserved insertion order and can have keys of any data type."
+            };
+            function show(dayNum){
+                    const container = document.getElementById("main-content");
+                    container.style.display = "block";
+
+                    const summary = daySummaries[dayNum] || "Summary not available.";
+
+                    // Adding the vals previous content
+                    container.innerHTML = `
+                        <h1 style="text-align: center; margin-bottom:14px;font-family: 'Oswald', sans-serif; font-style: italic; ">JavaScript</h1>
+                        <p style="margin-bottom:10px;font-family: 'Oswald', sans-serif; font-style: italic; font-size:35px;"> Day ${dayNum}: </p>
+                        <p style="font-size:20px; line-height: 35px; margin-bottom:35px;">${summary}</p>
+                    `;
+
+                    // Anchor to full notes
+                    const a1 = document.createElement("a");
+                    
+                    //styling
+
+                    a1.style.textDecoration="none";
+                    a1.style.fontSize="20px";
+                    a1.style.color="brown";
+                    a1.style.padding="10px";
+                    a1.style.border="3px solid green";
+                    a1.style.borderRadius="10px";
+                    a1.style.borderBottomRightRadius="0";
+                    a1.href = `notes html/day_${dayNum}.html`;
+                    a1.textContent = "Click here to access full notes";
+                    container.appendChild(a1);
+
+                    // "or"
+                    const or = document.createElement("p");
+                    or.innerHTML = "or";
+                    or.style.marginTop="14px";
+                    or.style.marginBottom="14px";
+                    or.style.padding="10px";
+                    container.appendChild(or);
+
+                    // Download link
+                    const a2 = document.createElement("a");
+
+                    //styling
+
+                    a2.style.textDecoration="none";
+                    a2.style.fontSize="20px";
+                    a2.style.color="Brown";
+                    a2.style.padding="10px";
+                    a2.style.border="3px solid green";
+                    a2.style.borderRadius="10px";
+                    a2.style.borderBottomRightRadius="0";
+                    a2.href = `js notes/day_${dayNum}_Javascript_notes.pdf`;
+                    a2.textContent = "Download";
+                    container.appendChild(a2);
+            }
+        </script>
+    </body>
+</html>
